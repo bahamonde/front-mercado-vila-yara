@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule  } from '@angular/router';
 
 import { UsuariosRoutingModule } from './usuarios-routing.module';
 import { UsuariosFormComponent } from './usuarios-form/usuarios-form.component';
@@ -13,7 +14,8 @@ import { UsuariosListaComponent } from './usuarios-lista/usuarios-lista.componen
   ],
   imports: [
     CommonModule,
-    UsuariosRoutingModule
+    UsuariosRoutingModule,
+    RouterModule
   ], exports: [
     UsuariosFormComponent,
     UsuariosListaComponent

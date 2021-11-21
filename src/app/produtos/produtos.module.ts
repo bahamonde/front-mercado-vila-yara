@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule  } from '@angular/router';
 
 import { ProdutosRoutingModule } from './produtos-routing.module';
 import { ProdutosFormComponent } from './produtos-form/produtos-form.component';
@@ -16,7 +17,8 @@ import { FormsModule } from '@angular/forms';
   imports: [
     CommonModule,
     ProdutosRoutingModule,
-    FormsModule
+    FormsModule,
+    RouterModule
   ], exports: [
     ProdutosFormComponent
   ]
