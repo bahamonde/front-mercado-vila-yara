@@ -3,17 +3,20 @@ import { CommonModule } from '@angular/common';
 
 import { UsuariosRoutingModule } from './usuarios-routing.module';
 import { UsuariosFormComponent } from './usuarios-form/usuarios-form.component';
+import { UsuariosListaComponent } from './usuarios-lista/usuarios-lista.component';
 
 
 @NgModule({
   declarations: [
-    UsuariosFormComponent
+    UsuariosFormComponent,
+    UsuariosListaComponent
   ],
   imports: [
     CommonModule,
     UsuariosRoutingModule
   ], exports: [
-    UsuariosFormComponent
+    UsuariosFormComponent,
+    UsuariosListaComponent
   ]
 })
 export class UsuariosModule { }
