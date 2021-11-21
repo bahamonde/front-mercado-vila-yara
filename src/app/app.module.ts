@@ -9,6 +9,8 @@ import { ProdutosModule } from './produtos/produtos.module';
 import { TemplateModule} from './template/template.module';
 import { ProdutosService } from './produtos.service';
 import { UsuariosModule } from './usuarios/usuarios.module';
+import { CategoriasModule } from './categorias/categorias.module';
+import { FuncoesModule } from './funcoes/funcoes.module';
 
 
 @NgModule({
@@ -21,7 +23,9 @@ import { UsuariosModule } from './usuarios/usuarios.module';
     AppRoutingModule,
     TemplateModule,
     ProdutosModule,
-    UsuariosModule
+    UsuariosModule,
+    CategoriasModule,
+    FuncoesModule
   ],
   providers: [
     ProdutosService
