@@ -1,7 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { UsuariosFormComponent } from './usuarios-form/usuarios-form.component'
 
-const routes: Routes = [];
+const routes: Routes = [
+  { path: 'usuarios/cadastro' , component: UsuariosFormComponent }
+];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],

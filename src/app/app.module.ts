@@ -8,6 +8,7 @@ import { ProdutosModule } from './produtos/produtos.module';
 
 import { TemplateModule} from './template/template.module';
 import { ProdutosService } from './produtos.service';
+import { UsuariosModule } from './usuarios/usuarios.module';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { ProdutosService } from './produtos.service';
     HttpClientModule,
     AppRoutingModule,
     TemplateModule,
-    ProdutosModule
+    ProdutosModule,
+    UsuariosModule
   ],
   providers: [
     ProdutosService

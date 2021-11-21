@@ -12,6 +12,8 @@ import { UsuariosFormComponent } from './usuarios-form/usuarios-form.component';
   imports: [
     CommonModule,
     UsuariosRoutingModule
+  ], exports: [
+    UsuariosFormComponent
   ]
 })
 export class UsuariosModule { }

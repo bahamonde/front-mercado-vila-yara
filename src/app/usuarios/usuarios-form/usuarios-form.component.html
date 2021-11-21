@@ -1,1 +1,40 @@
-<p>usuarios-form works!</p>
+<h1 class="mt-4">Cadastro de Usuario</h1>
+
+   
+<div class="container">
+        <form>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="nome">Nome</label>
+                    <input class="form-control" id="nome" type="text" placeholder="Nome">
+
+                    <label for="nome">Sobrenome</label>
+                    <input class="form-control" id="sobrenome" type="text" placeholder="Sobrenome">
+
+                    <label for="user">Username</label>
+                    <input class="form-control" id="user" type="text" placeholder="Username">
+                    
+                    <label for="funcao" id="funcao">Função</label>
+                    <select class="form-control" id="funcao">
+                        <option>Administrador</option>
+                        <option>Outro</option>                        
+                      </select>
+
+                    <label for="email">Email</label>
+                    <input class="form-control" id="email" type="email" placeholder="Digite o email">
+
+                    <label for="senha">Senha</label>
+                    <input class="form-control" id="senha" type="password" placeholder="Digite a senha">
+
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">
+                <button type="submit" class="btn btn-primary"> 
+                <i class="fa fa-save"></i> Cadastrar Usuario</button>
+            </div>
+        </div>
+    </form>
+</div>
