@@ -1,6 +1,5 @@
 <h1 class="mt-4">Funcoes</h1>
 
-
 <label for="nome">Procurar Função</label>
 <input class="form-control col-md-6" id="procurar" type="text" placeholder="Função" >
     
@@ -19,21 +18,14 @@
             </tr>
         </thead>
          <tbody>
-            <tr>
-                <td>Tiger Nixon</td>
+            <tr *ngFor="let funcao of funcoes">
+                <td>{{ funcao.nome }}</td>
                 <td>
                     <i class="fas fa-edit"></i>
                     <i class="fas fa-trash-alt"></i>
                 </td> 
             </tr>
-            <tr>
-                <td>Garrett Winters</td>
-                <td>
-                    <i class="fas fa-edit"></i>
-                    <i class="fas fa-trash-alt"></i>
-                </td> 
-            </tr>
-        </tbody>
+            </tbody>
     </table>
 </div>
     </div>

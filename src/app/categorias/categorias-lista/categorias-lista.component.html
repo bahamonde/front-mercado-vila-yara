@@ -1,6 +1,5 @@
 <h1 class="mt-4">Categorias</h1>
 
-
 <label for="nome">Procurar Categorias</label>
 <input class="form-control col-md-6" id="procurar" type="text" placeholder="Categorias" >
     
@@ -19,15 +18,8 @@
                     </tr>
                 </thead>
                  <tbody>
-                    <tr>
-                        <td>Tiger Nixon</td>
-                        <td>
-                            <i class="fas fa-edit"></i>
-                            <i class="fas fa-trash-alt"></i>
-                        </td> 
-                    </tr>
-                    <tr>
-                        <td>Garrett Winters</td>
+                    <tr *ngFor="let categoria of categorias">
+                        <td>{{ categoria.nome }}</td>
                         <td>
                             <i class="fas fa-edit"></i>
                             <i class="fas fa-trash-alt"></i>

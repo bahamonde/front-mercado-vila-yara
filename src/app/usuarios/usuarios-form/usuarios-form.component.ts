@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { UsuariosService } from 'src/app/usuarios.service';
 
+import { UsuariosService } from 'src/app/usuarios.service';
 import { Usuario } from '../usuario';
 
 @Component({
@@ -30,7 +30,6 @@ export class UsuariosFormComponent implements OnInit {
       this.errors = errorResponse.error.errors;     
     })
   }
-
  
 
 }

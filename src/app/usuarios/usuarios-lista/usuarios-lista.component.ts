@@ -7,6 +7,7 @@ import { Usuario } from '../usuario';
   templateUrl: './usuarios-lista.component.html',
   styleUrls: ['./usuarios-lista.component.css']
 })
+
 export class UsuariosListaComponent implements OnInit {
 
   usuarios: Usuario[]; //faz um array de Usuario vazio
