@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Categoria } from '../categoria';
 
 @Component({
   selector: 'app-categorias-form',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./categorias-form.component.css']
 })
 export class CategoriasFormComponent implements OnInit {
+
+  categoria : Categoria
 
   constructor() { }
 

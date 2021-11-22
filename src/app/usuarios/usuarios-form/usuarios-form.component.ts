@@ -11,6 +11,8 @@ import { Usuario } from '../usuario';
 export class UsuariosFormComponent implements OnInit {
 
   usuario: Usuario;
+  success: boolean = false;
+  errors: String[];
   
   constructor( private service: UsuariosService) { 
     this.usuario = new Usuario();
@@ -23,8 +25,12 @@ export class UsuariosFormComponent implements OnInit {
     this.service
     .salvar(this.usuario)
     .subscribe( response => {
-      console.log( response );      
+      this.success = true;    
+    }, errorResponse => {
+      this.errors = errorResponse.error.errors;     
     })
   }
+
+ 
 
 }

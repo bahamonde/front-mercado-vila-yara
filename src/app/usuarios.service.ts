@@ -15,11 +15,8 @@ export class UsuariosService {
       return this.http.post("http://localhost:8080/usuarios", usuario )  
   }
 
-  getUsuario() : Usuario {
-    let usuario = new Usuario();
-    usuario.nome = 'OK OK';
-    usuario.sobrenome = "Hum";
-    return usuario;
-  }
+  getUsuarios() : Observable<Usuario[]> {  
+    return this.http.get<Usuario[]>('http://localhost:8080/usuarios')
+  } 
 
 }

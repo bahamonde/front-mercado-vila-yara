@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Funcao } from '../funcao';
 
 @Component({
   selector: 'app-funcoes-form',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./funcoes-form.component.css']
 })
 export class FuncoesFormComponent implements OnInit {
+
+  funcao : Funcao;
 
   constructor() { }
 
