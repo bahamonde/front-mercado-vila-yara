@@ -7,10 +7,11 @@ import { AppComponent } from './app.component';
 import { ProdutosModule } from './produtos/produtos.module';
 
 import { TemplateModule} from './template/template.module';
-import { ProdutosService } from './produtos.service';
 import { UsuariosModule } from './usuarios/usuarios.module';
 import { CategoriasModule } from './categorias/categorias.module';
 import { FuncoesModule } from './funcoes/funcoes.module';
+import { ProdutosService } from './produtos.service';
+import { UsuariosService } from './usuarios.service';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { FuncoesModule } from './funcoes/funcoes.module';
     FuncoesModule
   ],
   providers: [
-    ProdutosService
+    ProdutosService,
+    UsuariosService
   ],
   bootstrap: [AppComponent]
 })

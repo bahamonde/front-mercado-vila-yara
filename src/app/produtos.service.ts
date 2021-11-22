@@ -14,7 +14,7 @@ export class ProdutosService {
   }
 
   salvar( produto: Produto ) : Observable<Produto> {
-    return this.http.post<Produto>('https://yarasupermercado.herokuapp.com/produtos' , produto);
+    return this.http.post<Produto>('http://localhost:8080/produtos' , produto);
   }
 
   getProduto(): Produto {

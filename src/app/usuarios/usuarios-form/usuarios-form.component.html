@@ -2,30 +2,30 @@
 
    
 <div class="container">
-        <form>
+    <form #usuarioForm="ngForm" (ngSubmit)="onSubmit()">
         <div class="row">
             <div class="col-md-6">
                 <div class="form-group">
                     <label for="nome">Nome</label>
-                    <input class="form-control" id="nome" type="text" placeholder="Nome">
-
+                    <input class="form-control" id="nome" type="text" placeholder="Nome" [(ngModel)]="usuario.nome" name="nome">
+                    
                     <label for="nome">Sobrenome</label>
-                    <input class="form-control" id="sobrenome" type="text" placeholder="Sobrenome">
+                    <input class="form-control" id="sobrenome" type="text" placeholder="Sobrenome" [(ngModel)]="usuario.sobrenome" name="sobrenome">
 
                     <label for="user">Username</label>
-                    <input class="form-control" id="user" type="text" placeholder="Username">
+                    <input class="form-control" id="user" type="text" placeholder="Username" [(ngModel)]="usuario.userName" name="userName">
                     
                     <label for="funcao" id="funcao">Função</label>
-                    <select class="form-control" id="funcao">
+                    <select class="form-control" id="funcao" [(ngModel)]="usuario.funcao" name="funcao">
                         <option>Administrador</option>
                         <option>Outro</option>                        
                       </select>
 
                     <label for="email">Email</label>
-                    <input class="form-control" id="email" type="email" placeholder="Digite o email">
+                    <input class="form-control" id="email" type="email" placeholder="Digite o email" [(ngModel)]="usuario.email" name="email">
 
                     <label for="senha">Senha</label>
-                    <input class="form-control" id="senha" type="password" placeholder="Digite a senha">
+                    <input class="form-control" id="senha" type="password" placeholder="Digite a senha" [(ngModel)]="usuario.senha" name="senha">
 
                 </div>
             </div>
