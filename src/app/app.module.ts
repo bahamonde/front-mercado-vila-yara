@@ -14,12 +14,14 @@ import { FuncoesModule } from './funcoes/funcoes.module';
 import { ProdutosService } from './produtos.service';
 import { UsuariosService } from './usuarios.service';
 import { LoginComponent } from './login/login.component';
+import { LayoutComponent } from './layout/layout.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
+    LayoutComponent,
   ],
   imports: [
     BrowserModule,
