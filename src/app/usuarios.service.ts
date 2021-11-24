@@ -2,6 +2,8 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
+import { environment } from 'src/environments/environment'; 
+
 import { Usuario } from './usuarios/usuario';
 
 
@@ -10,26 +12,28 @@ import { Usuario } from './usuarios/usuario';
 })
 export class UsuariosService {
 
+  apiURLBase: string = environment.apiURL + '/usuarios'  
+
   constructor( private http: HttpClient ) { } 
 
   salvar( usuario: Usuario ) : Observable<Usuario> {
-      return this.http.post("http://localhost:8080/usuarios", usuario )  
+      return this.http.post(`${this.apiURLBase}`, usuario )  
   }
 
   atualizar( usuario: Usuario ) : Observable<any> {
-    return this.http.put(`http://localhost:8080/usuarios/${usuario.id}`, usuario)  
+    return this.http.put(`${this.apiURLBase}/${usuario.id}`, usuario)  
   }
 
   getUsuarios() : Observable<Usuario[]> {  
-    return this.http.get<Usuario[]>('http://localhost:8080/usuarios')
+    return this.http.get<Usuario[]>(`${this.apiURLBase}`) 
   } 
 
   getUsuarioById( id: number ) : Observable<Usuario> {
-    return this.http.get<any>(`http://localhost:8080/usuarios/${id}`)
+    return this.http.get<any>(`${this.apiURLBase}/${id}`) 
   }
 
   deletar(usuario: Usuario) : Observable<any> { 
-    return this.http.delete<any>(`http://localhost:8080/usuarios/${usuario.id}`) 
+    return this.http.delete<any>(`${this.apiURLBase}/${usuario.id}`) 
   }
 
 }
