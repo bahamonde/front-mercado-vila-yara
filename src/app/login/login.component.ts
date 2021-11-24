@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-login',
@@ -7,7 +9,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent {
 
-  constructor() { }
+  constructor(
+    private router: Router
+  ) { }
 
   username: string;
   password: string;
@@ -16,7 +20,7 @@ export class LoginComponent {
   errors: String[];
 
   onSubmit(){
-    console.log(`${this.username}, Pass: ${this.password}`);
+    this.router.navigate(['/produtos'])
     
   }
 
