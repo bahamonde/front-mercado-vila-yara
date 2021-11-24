@@ -1,5 +1,4 @@
-<h1 class="mt-4">Cadastro de Usuario</h1>
-
+<h1 class="mt-4">{{ this.id == undefined ? 'Cadastro de Usuario' : 'Edição de Usuario' }}</h1>
    
 <div class="container">
     <form #usuarioForm="ngForm" (ngSubmit)="onSubmit()">
@@ -44,9 +43,15 @@
         </div>
         <div class="row">
             <div class="col-md-2">
-                <button type="submit" class="btn btn-primary"> 
+                <button type="submit" class="btn btn-primary" *ngIf="this.id == undefined "> 
                 <i class="fa fa-save"></i> Cadastrar Usuario</button>
             </div>
+
+            <div class="col-md-2">
+                <button type="submit" class="btn btn-primary" *ngIf="this.id != undefined "> 
+                <i class="fa fa-sync-alt"></i> Atualizar Usuario</button>
+            </div>
+
         </div>
     </form>
 </div>

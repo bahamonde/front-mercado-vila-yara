@@ -8,8 +8,6 @@ import { ProdutosFormComponent } from './produtos-form/produtos-form.component';
 import { ProdutosListaComponent } from './produtos-lista/produtos-lista.component';
 
 
-
-
 @NgModule({
   declarations: [
     ProdutosFormComponent,

@@ -11,19 +11,23 @@ import { ProdutosService } from 'src/app/produtos.service';
 export class ProdutosFormComponent implements OnInit {
 
   produto: Produto;
-
-  constructor(private service: ProdutosService) {
-    this.produto = service.getProduto();
-
-   }
-
+  success: boolean = false;
+  errors: String[];
+  
+  constructor( private service: ProdutosService) { 
+    this.produto = new Produto();
+  }
 
   ngOnInit(): void {
   }
 
-  onSubmit(){
-    console.log(this.produto);
-    
+  onSubmit() {
+    this.service
+    .salvar(this.produto)
+    .subscribe( response => {
+      this.success = true;    
+    }, errorResponse => {
+      this.errors = errorResponse.error.errors;     
+    })
   }
-
 }

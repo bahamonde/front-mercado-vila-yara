@@ -2,6 +2,18 @@
    
 <div class="container">
         <form #produtoForm="ngForm" (ngSubmit)="onSubmit()">
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="alert alert-success" role="alert" *ngIf= "success == true">
+                        Produto salvo com sucesso.
+                      </div>
+                      <div class="alert alert-danger" role="alert" *ngFor="let erro of errors"> 
+                        {{erro}}
+                      </div>
+                </div>
+            </div>
+
         <div class="row">
             <div class="col-md-6">
                 <div class="form-group">
@@ -15,6 +27,8 @@
                         <option>Mercearia</option>
                         <option>Higiene</option>
                       </select>
+                      <label for="nome">Imagem</label>
+                    <input class="form-control" id="imagem" type="text" placeholder="Imagem" [(ngModel)]="produto.imagem" name="imagem">
                     <label for="preco" step = "0.01">Preço</label>
                     <input class="form-control" id="preco" type="number" placeholder="0.00" min="0" [(ngModel)]="produto.precoUnitario" name="precoUnitario">
                     <label for="qtd">Quantidade</label>

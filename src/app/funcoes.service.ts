@@ -13,11 +13,11 @@ export class FuncoesService {
   constructor( private http: HttpClient ) { } 
 
   salvar( funcoes: Funcao ) : Observable<Funcao> {
-      return this.http.post("http://localhost:8080/funcoes", funcoes )  
+      return this.http.post("http://localhost:8080/funcao", funcoes )  
   }
 
   getFuncoes() : Observable<Funcao[]> {  
-    return this.http.get<Funcao[]>('http://localhost:8080/funcoes')
+    return this.http.get<Funcao[]>('http://localhost:8080/funcao')
   } 
 
 }

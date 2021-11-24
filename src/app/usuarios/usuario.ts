@@ -6,5 +6,4 @@ export class Usuario {
     senha?: string;
     sobrenome?: string;
     userName?: string ;  
-    data_criacao?: string;
 }

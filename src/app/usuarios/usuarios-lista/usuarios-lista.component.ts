@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+
 import { UsuariosService } from 'src/app/usuarios.service';
 import { Usuario } from '../usuario'; 
 
@@ -10,7 +11,10 @@ import { Usuario } from '../usuario';
 
 export class UsuariosListaComponent implements OnInit {
 
-  usuarios: Usuario[]; //faz um array de Usuario vazio
+  usuarios: Usuario[]; 
+  usuarioSelecionado: Usuario; //
+  mensagemSucesso: string; //
+  mensagemErro: string; //
 
   constructor(private service: UsuariosService) {  
  
@@ -20,6 +24,22 @@ export class UsuariosListaComponent implements OnInit {
     this.service      
     .getUsuarios()
     .subscribe( resposta => this.usuarios = resposta )
+  }
+
+  preparaDelecao(usuario: Usuario){
+    this.usuarioSelecionado = usuario;
+  }
+
+  deletarUsuario(){  //
+    this.service
+      .deletar(this.usuarioSelecionado)
+      .subscribe( 
+        response => {
+          this.mensagemSucesso = 'Usuario deletado com sucesso!'
+          this.ngOnInit();
+        },
+        erro => this.mensagemErro = 'Ocorreu um erro ao deletar o usuario.'  
+      )
   }
 
 }
