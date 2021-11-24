@@ -35,8 +35,8 @@ export class UsuariosFormComponent implements OnInit {
           this.service
             .getUsuarioById(this.id)
             .subscribe( 
-              response => this.usuario = response ,
-              errorResponse => this.usuario = new Usuario()
+              response => this.usuario = response 
+              
             )
         }
     })
@@ -65,8 +65,8 @@ export class UsuariosFormComponent implements OnInit {
             this.usuario = response;
           } , errorResponse => {
             this.success = false;
-            this.errors = errorResponse.error.errors;
           })
+          this.errors = ['Atualização realizada com sucesso.']
     }
 
   }
